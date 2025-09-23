@@ -1,340 +1,157 @@
-
-
-<!DOCTYPE html>  <!-- saved from url=(0080)http://127.0.0.1:5500/projeto%20meio%20ambiente/projeto%20NR33%20NR35/index.html -->  <html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <meta name="description" content="Quiz sobre Segurança do Trabalho com base nas normas NR33 e NR35. Desenvolvido por Lucas Grassotti Spolavori.">  
-  <meta name="keywords" content="Segurança do Trabalho, NR33, NR35, Espaços Confinados, Trabalho em Altura, Quiz, RSS3 Soluções Industriais">  
-  <meta name="author" content="Lucas Grassotti Spolavori">  
-  <title>Quiz Segurança do Trabalho - NR33 e NR35</title>  
-  <style>  
-    body {  
-      font-family: Arial, sans-serif;  
-      background-color: #ffffff;  
-      color: #333;  
-      margin: 0;  
-      padding: 0;  
-    }  header {  
-  background: linear-gradient(90deg, #0044cc, #ff6600);  
-  color: white;  
-  padding: 20px;  
-  text-align: center;  
-  border-bottom: 5px solid #0044cc;  
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Quiz sobre Segurança do Trabalho com base nas normas NR33 e NR35. Desenvolvido por Lucas Grassotti Spolavori.">
+<meta name="keywords" content="Segurança do Trabalho, NR33, NR35, Espaços Confinados, Trabalho em Altura, Quiz, RSS3 Soluções Industriais">
+<meta name="author" content="Lucas Grassotti Spolavori">
+<title>Quiz Segurança do Trabalho - NR33 e NR35</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: linear-gradient(90deg, #0044cc, #ff6600);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid #0044cc;
+  position: relative; /* Adicionado para posicionar o logo */
 }
 
 .topo {
-display: flex;
-align-items: center;
-justify-content: center; /* centraliza o bloco title */
-flex-wrap: wrap;
-position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza o bloco title */
+  position: relative;
 }
 
 .logo {
-position: absolute; /* fixa no canto esquerdo /
-left: 20px;         / distância da borda esquerda /
-top: 50%;
-transform: translateY(-50%); / centraliza verticalmente */
-max-width: 100px;
-height: auto;
+  position: absolute; /* Posição fixa para o logo */
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 100px;
+  height: auto;
 }
 
 .title {
-text-align: center; /* garante que h1 e h3 fiquem no meio */
+  text-align: center;
+  margin: 0 auto; /* Centraliza o título no espaço restante */
+  flex-grow: 1; /* Permite que o título ocupe o espaço restante */
 }
 
 .title h1 {
-margin: 0;
-font-size: 1.8em;
+  margin: 0;
+  font-size: 1.8em;
 }
 
 .title h3 {
-margin: 5px 0 0 0;
-font-size: 1em;
-font-weight: normal;
+  margin: 5px 0 0 0;
+  font-size: 1em;
+  font-weight: normal;
 }
 
-.logo {  
-  max-width: 100px;  
-  height: auto;  
-}  
-
-.title h1 {  
-  margin: 0;  
-  font-size: 1.8em;  
-}  
-
-.title h3 {  
-  margin: 5px 0 0 0;  
-  font-size: 1em;  
-  font-weight: normal;  
-}  
-
-main {  
-  padding: 20px;  
-  max-width: 900px;  
-  margin: auto;  
-}  
-
-.intro {  
-  background-color: #f2f8ff;  
-  border-left: 5px solid #ff6600;  
-  padding: 15px;  
-  margin-bottom: 30px;  
-  border-radius: 10px;  
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
-}  
-
-h2 {  
-  color: #084eb6;  
-}  
-
-.question {  
-  background-color: #fff8f2;  
-  border: 2px solid #0044cc;  
-  border-radius: 12px;  
-  padding: 15px;  
-  margin-bottom: 20px;  
-  box-shadow: 0 3px 6px rgba(0,0,0,0.08);  
-}  
-
-.options label {  
-  display: block;  
-  margin-bottom: 5px;  
-  cursor: pointer;  
-}  
-
-button {  
-  background-color:#0044cc;  
-  color:white;  
-  padding:10px 20px;  
-  border:none;  
-  border-radius:8px;  
-  font-size:16px;  
-  cursor:pointer;  
-  display: block;  
-  margin: 20px auto;  
-}  
-
-footer {  
-  text-align: center;  
-  background-color: #0044cc;  
-  color: white;  
-  padding: 15px;  
-  margin-top: 30px;  
-}  
-
-footer em {  
-  color: #ffcc99;  
-}  
-
-/* Ajustes para celular */  
-@media (max-width: 600px) {  
-  .title h1 {  
-    font-size: 1.4em;  
-  }  
-  .title h3 {  
-    font-size: 0.9em;  
-  }  
-  .logo {  
-    max-width: 70px;  
-  }  
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
-  </style>  
-</head>  
-<body>  
-  <header>  
-    <div class="topo">  
-      <img src="IMAGENS/logo.png" alt="RSS3 Soluções Industriais LTDA" class="logo">  
-      <div class="title">  
-        <h1>Quiz de Segurança do Trabalho</h1>  
-        <h3>Baseado nas Normas Regulamentadoras NR33 e NR35</h3>  
-      </div>  
-    </div>  
-  </header>    <main>  
-    <section class="intro">  
-      <h2>Sobre este quiz</h2>  
-      <p>  
-        Este quiz foi desenvolvido para reforçar os conhecimentos sobre   
-        segurança do trabalho, com foco nas normas NR33 (Espaços Confinados)   
-        e NR35 (Trabalho em Altura).    
-        O objetivo é auxiliar profissionais a compreenderem os riscos e   
-        práticas seguras exigidas por lei, promovendo a prevenção de acidentes   
-        e a valorização da vida no ambiente de trabalho.    
-        Desenvolvedor: <em>Lucas Grassotti Spolavori</em>  
-      </p>  
-    </section>  <section>  
-  <h2>Perguntas sobre a NR33</h2>  
-  <div class="question">  
-    <h3>1. Qual é o principal objetivo da NR33?</h3>  
-    <div class="options">  
-      <label><input type="radio" name="q1" value="a"> a) Regular o trabalho em altura</label>  
-      <label><input type="radio" name="q1" value="b"> b) Garantir segurança em espaços confinados</label>  
-      <label><input type="radio" name="q1" value="c"> c) Definir limites de peso para transporte manual</label>  
-      <label><input type="radio" name="q1" value="d"> d) Normatizar o uso de EPIs em geral</label>  
-    </div>  
-  </div>  
+.intro {
+  background-color: #f2f8ff;
+  border-left: 5px solid #ff6600;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-  <div class="question">  
-    <h3>2. Espaço confinado é caracterizado por:</h3>  
-    <div class="options">  
-      <label><input type="radio" name="q2" value="a"> a) Local aberto, bem ventilado</label>  
-      <label><input type="radio" name="q2" value="b"> b) Área de fácil acesso</label>  
-      <label><input type="radio" name="q2" value="c"> c) Ambiente com entrada limitada e ventilação insuficiente</label>  
-      <label><input type="radio" name="q2" value="d"> d) Qualquer área acima de 2 metros</label>  
-    </div>  
-  </div>  
+h2 {
+  color: #084eb6;
+}
 
-  <div class="question">  
-    <h3>3. Quem pode atuar em espaços confinados?</h3>  
-    <div class="options">  
-      <label><input type="radio" name="q3" value="a"> a) Qualquer trabalhador</label>  
-      <label><input type="radio" name="q3" value="b"> b) Apenas trabalhadores capacitados e autorizados</label>  
-      <label><input type="radio" name="q3" value="c"> c) Supervisores da empresa</label>  
-      <label><input type="radio" name="q3" value="d"> d) Terceirizados sem treinamento</label>  
-    </div>  
-  </div>  
+.question {
+  background-color: #fff8f2;
+  border: 2px solid #0044cc;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
 
-  <div class="question">  
-    <h3>4. Um dos principais riscos em espaços confinados é:</h3>  
-    <div class="options">  
-      <label><input type="radio" name="q4" value="a"> a) Exposição a alturas elevadas</label>  
-      <label><input type="radio" name="q4" value="b"> b) Deficiência de oxigênio ou presença de gases tóxicos</label>  
-      <label><input type="radio" name="q4" value="c"> c) Excesso de iluminação</label>  
-      <label><input type="radio" name="q4" value="d"> d) Calor intenso</label>  
-    </div>  
-  </div>  
+.options label {
+  display: block;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
 
-  <div class="question">  
-    <h3>5. O que deve ser emitido antes da entrada em espaço confinado?</h3>  
-    <div class="options">  
-      <label><input type="radio" name="q5" value="a"> a) Permissão de Trabalho (PT)</label>  
-      <label><input type="radio" name="q5" value="b"> b) Atestado Médico</label>  
-      <label><input type="radio" name="q5" value="c"> c) Relatório de Segurança</label>  
-      <label><input type="radio" name="q5" value="d"> d) Ordem de Serviço</label>  
-    </div>  
-  </div>  
-</section>  
+button {
+  background-color:#0044cc;
+  color:white;
+  padding:10px 20px;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+  display: block;
+  margin: 20px auto;
+}
 
-<section>  
-  <h2>Perguntas sobre a NR35</h2>  
+footer {
+  text-align: center;
+  background-color: #0044cc;
+  color: white;
+  padding: 15px;
+  margin-top: 30px;
+}
 
-  <div class="question">  
-    <h3>6. O que a NR35 regulamenta?</h3>  
-    <div class="options">  
-      <label><input type="radio" name="q6" value="a"> a) Trabalho em altura</label>  
-      <label><input type="radio" name="q6" value="b"> b) Trabalho com inflamáveis</label>  
-      <label><input type="radio" name="q6" value="c"> c) Trabalho com eletricidade</label>  
-      <label><input type="radio" name="q6" value="d"> d) Transporte manual de cargas</label>  
-    </div>  
-  </div>  
+footer em {
+  color: #ffcc99;
+}
 
-  <div class="question">  
-    <h3>7. É considerado trabalho em altura toda atividade realizada:</h3>  
-    <div class="options">  
-      <label><input type="radio" name="q7" value="a"> a) Acima de 1 metro</label>  
-      <label><input type="radio" name="q7" value="b"> b) Acima de 2 metros</label>  
-      <label><input type="radio" name="q7" value="c"> c) Acima de 3 metros</label>  
-      <label><input type="radio" name="q7" value="d"> d) Acima de 5 metros</label>  
-    </div>  
-  </div>  
-
-  <div class="question">  
-    <h3>8. Antes de realizar trabalho em altura é obrigatório:</h3>  
-    <div class="options">  
-      <label><input type="radio" name="q8" value="a"> a) Apenas o uso de capacete</label>  
-      <label><input type="radio" name="q8" value="b"> b) Treinamento específico e uso de EPI adequado</label>  
-      <label><input type="radio" name="q8" value="c"> c) Autorização verbal do supervisor</label>  
-      <label><input type="radio" name="q8" value="d"> d) Não há exigências específicas</label>  
-    </div>  
-  </div>  
-
-  <div class="question">  
-    <h3>9. Um dos EPIs mais utilizados no trabalho em altura é:</h3>  
-    <div class="options">  
-      <label><input type="radio" name="q9" value="a"> a) Protetor auricular</label>  
-      <label><input type="radio" name="q9" value="b"> b) Cinto de segurança tipo paraquedista</label>  
-      <label><input type="radio" name="q9" value="c"> c) Luvas de borracha</label>  
-      <label><input type="radio" name="q9" value="d"> d) Botas impermeáveis</label>  
-    </div>  
-  </div>  
-
-  <div class="question">  
-    <h3>10. Quem pode autorizar a execução do trabalho em altura?</h3>  
-    <div class="options">  
-      <label><input type="radio" name="q10" value="a"> a) Qualquer trabalhador presente</label>  
-      <label><input type="radio" name="q10" value="b"> b) Apenas a CIPA</label>  
-      <label><input type="radio" name="q10" value="c"> c) O empregador ou pessoa formalmente autorizada</label>  
-      <label><input type="radio" name="q10" value="d"> d) O próprio trabalhador</label>  
-    </div>  
-  </div>  
-</section>  
-
-<button onclick="calcularAcertos()">Enviar</button>
-
-  </main>    <script>  
-    function calcularAcertos() {  
-      let acertos = 0;  
-  
-      const respostasCorretas = {  
-        q1: "b",  
-        q2: "c",  
-        q3: "b",  
-        q4: "b",  
-        q5: "a",  
-        q6: "a",  
-        q7: "b",  
-        q8: "b",  
-        q9: "b",  
-        q10: "c"  
-      };  
-  
-      for (let pergunta in respostasCorretas) {  
-        const respostaSelecionada = document.querySelector(`input[name="${pergunta}"]:checked`);  
-        if (respostaSelecionada && respostaSelecionada.value === respostasCorretas[pergunta]) {  
-          acertos++;  
-        }  
-      }  
-  
-      window.location.href = "respostas.html?acertos=" + acertos;  
-    }  
-  </script>    <footer>  
-    <p>© 2025 RSS3 Soluções Industriais LTDA | Desenvolvido por <em>Lucas Grassotti Spolavori</em></p>  
-  </footer>  
-<!-- Code injected by live-server -->  
-<script>  
-	// <![CDATA[  <-- For SVG support  
-	if ('WebSocket' in window) {  
-		(function () {  
-			function refreshCSS() {  
-				var sheets = [].slice.call(document.getElementsByTagName("link"));  
-				var head = document.getElementsByTagName("head")[0];  
-				for (var i = 0; i < sheets.length; ++i) {  
-					var elem = sheets[i];  
-					var parent = elem.parentElement || head;  
-					parent.removeChild(elem);  
-					var rel = elem.rel;  
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {  
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');  
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());  
-					}  
-					parent.appendChild(elem);  
-				}  
-			}  
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';  
-			var address = protocol + window.location.host + window.location.pathname + '/ws';  
-			var socket = new WebSocket(address);  
-			socket.onmessage = function (msg) {  
-				if (msg.data == 'reload') window.location.reload();  
-				else if (msg.data == 'refreshcss') refreshCSS();  
-			};  
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {  
-				console.log('Live reload enabled.');  
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);  
-			}  
-		})();  
-	}  
-	else {  
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');  
-	}  
-	// ]]>  
-</script>  </body></html>  
+/* Início das Media Queries para Responsividade */
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+  .topo {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo {
+    position: static;
+    transform: none;
+    margin-bottom: 10px;
+  }
+  .title {
+    text-align: center;
+    flex-grow: 0;
+  }
+  .title h1 {
+    font-size: 1.4em;
+  }
+  .title h3 {
+    font-size: 0.8em;
+  }
+  main {
+    padding: 10px;
+  }
+  .question h3 {
+    font-size: 1em;
+  }
+  .options label {
+    font-size: 0.9em;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+<div class="topo
