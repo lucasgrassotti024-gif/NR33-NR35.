@@ -9,36 +9,36 @@
 body { font-family: Arial, sans-serif; background-color: #ffffff; color: #333; margin: 0; padding: 0; }
 
 .question { background-color: #fff8f2; border: 2px solid #003366; border-radius: 12px; padding: 15px; margin-bottom: 20px; box-shadow: 0 3px 6px rgba(0,0,0,0.08); }
-.options label { display: block; margin-bottom: 5px; cursor: pointer; }
 footer { text-align: center; background-color: #003366; color: white; padding: 15px; margin-top: 30px; }
 footer em { color: #ffcc99; }
- header {
-      background: linear-gradient(90deg, #0044cc, #ff6600);
-      color: white;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 5px solid #0044cc;
-    }
 
- .topo {
+header {
+  background: linear-gradient(90deg, #0044cc, #ff6600);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid #0044cc;
+}
+
+.topo {
   display: flex;
   align-items: center;
-  justify-content: center; /* centraliza o bloco title */
+  justify-content: center;
   flex-wrap: wrap;
   position: relative;
 }
 
 .logo {
-  position: absolute; /* fixa no canto esquerdo */
-  left: 20px;         /* distância da borda esquerda */
+  position: absolute;
+  left: 20px;
   top: 50%;
-  transform: translateY(-50%); /* centraliza verticalmente */
+  transform: translateY(-50%);
   max-width: 100px;
   height: auto;
 }
 
 .title {
-  text-align: center; /* garante que h1 e h3 fiquem no meio */
+  text-align: center;
 }
 
 .title h1 {
@@ -46,140 +46,81 @@ footer em { color: #ffcc99; }
   font-size: 1.8em;
 }
 
-.title h3 {
-  margin: 5px 0 0 0;
-  font-size: 1em;
-  font-weight: normal;
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
-    .logo {
-      max-width: 100px;
-      height: auto;
-    }
+h2 {
+  color: #084eb6;
+}
 
-    .title h1 {
-      margin: 0;
-      font-size: 1.8em;
-    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
 
-    .title h3 {
-      margin: 5px 0 0 0;
-      font-size: 1em;
-      font-weight: normal;
-    }
+table th, table td {
+  padding: 10px;
+}
 
-    main {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+table th {
+  background-color:#003366;
+  color:white;
+}
 
-    .intro {
-      background-color: #f2f8ff;
-      border-left: 5px solid #ff6600;
-      padding: 15px;
-      margin-bottom: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+/* Responsividade */
+@media (max-width: 768px) {
+  .topo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    position: static;
+    transform: none;
+    margin-bottom: 10px;
+  }
+  .title h1 {
+    font-size: 1.5em;
+  }
+  table {
+    font-size: 13px;
+  }
+}
 
-    h2 {
-      color: #084eb6;
-    }
-
-
-input[checked] { accent-color: #16a718; }
+@media (max-width: 480px) {
+  main {
+    padding: 10px;
+  }
+  .title h1 {
+    font-size: 1.3em;
+  }
+  table {
+    font-size: 12px;
+  }
+}
 </style>
 </head>
 <body>
 <header>
-<div class="topo">
-      <img src="IMAGENS/logo.png" alt="RSS3 Soluções Industriais LTDA" class="logo">
-      <div class="title">
-<h1>Respostas do Quiz</h1>
-<p><description><strong>Segurança do Trabalho - NR33 e NR35</strong></description></p>
-</div>
-</div>
+  <div class="topo">
+    <img src="IMAGENS/logo.png" alt="RSS3 Soluções Industriais LTDA" class="logo">
+    <div class="title">
+      <h1>Respostas do Quiz</h1>
+      <p><strong>Segurança do Trabalho - NR33 e NR35</strong></p>
+    </div>
+  </div>
 </header>
 
 <main>
-<section>
-<h2>Respostas do Quiz</h2>
-
-<div class="question">
-<h3>1. A NR33 trata sobre qual assunto?</h3>
-<div class="options">
-<label><input type="radio" name="q1" checked> c) Espaços confinados</label>
-</div>
-</div>
-
-<div class="question">
-<h3>2. O que é considerado espaço confinado?</h3>
-<div class="options">
-<label><input type="radio" name="q2" checked> d) Ambiente não projetado para ocupação contínua com acesso limitado</label>
-</div>
-</div>
-
-<div class="question">
-<h3>3. Qual documento é obrigatório antes de entrar em espaço confinado?</h3>
-<div class="options">
-<label><input type="radio" name="q3" checked> b) Permissão de Entrada e Trabalho (PET)</label>
-</div>
-</div>
-
-<div class="question">
-<h3>4. Quem pode emitir a Permissão de Entrada e Trabalho (PET)?</h3>
-<div class="options">
-<label><input type="radio" name="q4" checked> d) O responsável técnico capacitado</label>
-</div>
-</div>
-
-<div class="question">
-<h3>5. A NR35 trata de qual tema principal?</h3>
-<div class="options">
-<label><input type="radio" name="q5" checked> c) Trabalho em altura</label>
-</div>
-</div>
-
-<div class="question">
-<h3>6. Qual a altura mínima que caracteriza trabalho em altura segundo a NR35?</h3>
-<div class="options">
-<label><input type="radio" name="q6" checked> c) 2,0 metros</label>
-</div>
-</div>
-
-<div class="question">
-<h3>7. O que deve ser feito antes de iniciar o trabalho em altura?</h3>
-<div class="options">
-<label><input type="radio" name="q7" checked> b) Analisar os riscos e usar EPI</label>
-</div>
-</div>
-
-<div class="question">
-<h3>8. Quem é responsável por suspender uma atividade em altura em caso de risco?</h3>
-<div class="options">
-<label><input type="radio" name="q8" checked> d) Qualquer trabalhador ao identificar risco</label>
-</div>
-</div>
-
-<div class="question">
-<h3>9. Qual é o principal equipamento de proteção em altura?</h3>
-<div class="options">
-<label><input type="radio" name="q9" checked> c) Cinto de segurança tipo paraquedista</label>
-</div>
-</div>
-
-<div class="question">
-<h3>10. A NR35 exige treinamento com qual frequência?</h3>
-<div class="options">
-<label><input type="radio" name="q10" checked> a) A cada 12 meses</label>
-</div>
-</div>
-
 <section class="pontuacao">
 <h2>Seu Desempenho</h2>
-<table border="1" cellspacing="0" cellpadding="10" style="width:100%; border-collapse:collapse; text-align:center; margin-top:20px;">
-<thead style="background-color:#003366; color:white;">
+<table border="1" cellspacing="0" cellpadding="10">
+<thead>
 <tr>
 <th>Respostas Corretas</th>
 <th>Pontuação</th>
@@ -220,18 +161,16 @@ input[checked] { accent-color: #16a718; }
 <h2>Resultado</h2>
 <p id="acertos" style="font-size:18px; font-weight:bold; color:#003366;"> Você acertou <span id="totalAcertos">0</span> questões. </p>
 </section>
-
 </main>
+
 <footer>
 <p>&copy; 2025 RSS3 Soluções Industriais LTDA | Desenvolvido por <em>Lucas Grassotti Spolavori</em></p>
 </footer>
 
 <script>
-// Pega parâmetro da URL (ex: respostas.html?acertos=7)
 const params = new URLSearchParams(window.location.search);
 const acertos = params.get("acertos") || 0;
 document.getElementById("totalAcertos").textContent = acertos;
 </script>
-
 </body>
 </html>
