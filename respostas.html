@@ -18,13 +18,13 @@ color: white;
 padding: 20px;
 text-align: center;
 border-bottom: 5px solid #0044cc;
-position: relative; /* Necessário para posicionar o logo */
+position: relative;
 }
 
 .topo {
 display: flex;
 align-items: center;
-justify-content: center;
+justify-content: space-between; /* Novo: Espalha os elementos */
 position: relative;
 }
 
@@ -39,8 +39,7 @@ height: auto;
 
 .title {
 text-align: center;
-margin: 0 auto; /* Centraliza o título */
-padding-left: 120px; /* Adiciona espaço à esquerda para o logo */
+flex-grow: 1; /* Novo: Permite que o título ocupe o espaço restante e se centralize */
 }
 
 .title h1 {
@@ -83,21 +82,14 @@ padding: 10px;
 .topo {
 flex-direction: column;
 align-items: center;
-text-align: center;
 }
-/* Estilo para a logo */
 .logo {
-  /* ... outros estilos ... */
-  position: absolute; /* Permite posicionar o logo em relação ao seu contêiner pai */
-  left: 20px; /* Distância da borda esquerda */
-  top: 50%; /* Centraliza verticalmente o logo */
-  transform: translateY(-50%); /* Ajuste fino para a centralização vertical */
+position: static;
+transform: none;
+margin-bottom: 10px;
 }
-
-/* Estilo para o título */
 .title {
-  /* ... outros estilos ... */
-  padding-left: 120px; /* Adiciona um espaço à esquerda para que o título não fique por cima do logo */
+flex-grow: 0;
 }
 .title h1 {
 font-size: 1.4em;
@@ -248,4 +240,34 @@ td:nth-of-type(3):before { content: "Mensagem de Incentivo"; }
 <tr>
 <td data-label="Respostas Corretas">6 a 7</td>
 <td data-label="Pontuação">Bom</td>
-<td data-label="Mensagem de Incentivo">Bom trabalho, seu conhecimento está evoluindo!
+<td data-label="Mensagem de Incentivo">Bom trabalho, seu conhecimento está evoluindo! 👏</td>
+</tr>
+<tr>
+<td data-label="Respostas Corretas">8 a 9</td>
+<td data-label="Pontuação">Ótimo</td>
+<td data-label="Mensagem de Incentivo">Parabéns! Você está muito bem preparado! 🎯</td>
+</tr>
+<tr>
+<td data-label="Respostas Corretas">10</td>
+<td data-label="Pontuação">Excelente</td>
+<td data-label="Mensagem de Incentivo">Incrível! Você dominou o conteúdo com perfeição! 🏆</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="resultado">
+<h2>Resultado</h2>
+<p id="acertos" style="font-size:18px; font-weight:bold; color:#003366;"> Você acertou <span id="totalAcertos">0</span> questões. </p>
+</section>
+</main>
+<footer>
+<p>&copy; 2025 RSS3 Soluções Industriais LTDA | Desenvolvido por <em>Lucas Grassotti Spolavori</em></p>
+</footer>
+<script>
+// Pega parâmetro da URL (ex: respostas.html?acertos=7)
+const params = new URLSearchParams(window.location.search);
+const acertos = params.get("acertos") || 0;
+document.getElementById("totalAcertos").textContent = acertos;
+</script>
+</body>
+</html>
