@@ -85,13 +85,19 @@ flex-direction: column;
 align-items: center;
 text-align: center;
 }
+/* Estilo para a logo */
 .logo {
-position: static;
-transform: none;
-margin-bottom: 10px;
+  /* ... outros estilos ... */
+  position: absolute; /* Permite posicionar o logo em relação ao seu contêiner pai */
+  left: 20px; /* Distância da borda esquerda */
+  top: 50%; /* Centraliza verticalmente o logo */
+  transform: translateY(-50%); /* Ajuste fino para a centralização vertical */
 }
+
+/* Estilo para o título */
 .title {
-padding-left: 0; /* Remove o padding em telas menores */
+  /* ... outros estilos ... */
+  padding-left: 120px; /* Adiciona um espaço à esquerda para que o título não fique por cima do logo */
 }
 .title h1 {
 font-size: 1.4em;
