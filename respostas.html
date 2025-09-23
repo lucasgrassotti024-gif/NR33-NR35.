@@ -12,7 +12,7 @@ body { font-family: Arial, sans-serif; background-color: #ffffff; color: #333; m
 .options label { display: block; margin-bottom: 5px; cursor: pointer; }
 footer { text-align: center; background-color: #003366; color: white; padding: 15px; margin-top: 30px; }
 footer em { color: #ffcc99; }
-header {
+ header {
       background: linear-gradient(90deg, #0044cc, #ff6600);
       color: white;
       padding: 20px;
@@ -90,13 +90,17 @@ header {
 
 input[checked] { accent-color: #16a718; }
 
-/* Adicionado para Responsividade */
+/* Início das Media Queries para Responsividade */
 @media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+  
   .topo {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 80px; /* Adiciona espaço para o logo */
+    padding-top: 100px; 
   }
 
   .logo {
@@ -104,15 +108,15 @@ input[checked] { accent-color: #16a718; }
     transform: none;
     margin-bottom: 10px;
   }
-  
+
   .title h1 {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
 
   .title h3 {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
-  
+
   main {
     padding: 10px;
   }
@@ -124,7 +128,8 @@ input[checked] { accent-color: #16a718; }
   .options label {
     font-size: 0.9em;
   }
-  
+
+  /* Estilo para a tabela em telas pequenas */
   table, thead, tbody, th, td, tr { 
     display: block; 
   }
@@ -135,7 +140,10 @@ input[checked] { accent-color: #16a718; }
     left: -9999px;
   }
   
-  tr { border: 1px solid #ccc; }
+  tr {
+    border: 1px solid #ccc; 
+    margin-bottom: 10px;
+  }
   
   td { 
     border: none;
@@ -143,6 +151,7 @@ input[checked] { accent-color: #16a718; }
     position: relative;
     padding-left: 50%; 
     text-align: left;
+    white-space: normal;
   }
   
   td:before {
@@ -229,80 +238,4 @@ input[checked] { accent-color: #16a718; }
 <div class="question">
 <h3>8. Quem é responsável por suspender uma atividade em altura em caso de risco?</h3>
 <div class="options">
-<label><input type="radio" name="q8" checked> d) Qualquer trabalhador ao identificar risco</label>
-</div>
-</div>
-
-<div class="question">
-<h3>9. Qual é o principal equipamento de proteção em altura?</h3>
-<div class="options">
-<label><input type="radio" name="q9" checked> c) Cinto de segurança tipo paraquedista</label>
-</div>
-</div>
-
-<div class="question">
-<h3>10. A NR35 exige treinamento com qual frequência?</h3>
-<div class="options">
-<label><input type="radio" name="q10" checked> a) A cada 12 meses</label>
-</div>
-</div>
-
-<section class="pontuacao">
-<h2>Seu Desempenho</h2>
-<table border="1" cellspacing="0" cellpadding="10" style="width:100%; border-collapse:collapse; text-align:center; margin-top:20px;">
-<thead style="background-color:#003366; color:white;">
-<tr>
-<th>Respostas Corretas</th>
-<th>Pontuação</th>
-<th>Mensagem de Incentivo</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td data-label="Respostas Corretas">0 a 2</td>
-<td data-label="Pontuação">Precisa melhorar</td>
-<td data-label="Mensagem de Incentivo">Não desanime, revise o conteúdo e tente novamente! 💪</td>
-</tr>
-<tr>
-<td data-label="Respostas Corretas">3 a 5</td>
-<td data-label="Pontuação">Regular</td>
-<td data-label="Mensagem de Incentivo">Você está no caminho, continue praticando! 🚀</td>
-</tr>
-<tr>
-<td data-label="Respostas Corretas">6 a 7</td>
-<td data-label="Pontuação">Bom</td>
-<td data-label="Mensagem de Incentivo">Bom trabalho, seu conhecimento está evoluindo! 👏</td>
-</tr>
-<tr>
-<td data-label="Respostas Corretas">8 a 9</td>
-<td data-label="Pontuação">Ótimo</td>
-<td data-label="Mensagem de Incentivo">Parabéns! Você está muito bem preparado! 🎯</td>
-</tr>
-<tr>
-<td data-label="Respostas Corretas">10</td>
-<td data-label="Pontuação">Excelente</td>
-<td data-label="Mensagem de Incentivo">Incrível! Você dominou o conteúdo com perfeição! 🏆</td>
-</tr>
-</tbody>
-</table>
-</section>
-
-<section class="resultado">
-<h2>Resultado</h2>
-<p id="acertos" style="font-size:18px; font-weight:bold; color:#003366;"> Você acertou <span id="totalAcertos">0</span> questões. </p>
-</section>
-
-</main>
-<footer>
-<p>&copy; 2025 RSS3 Soluções Industriais LTDA | Desenvolvido por <em>Lucas Grassotti Spolavori</em></p>
-</footer>
-
-<script>
-// Pega parâmetro da URL (ex: respostas.html?acertos=7)
-const params = new URLSearchParams(window.location.search);
-const acertos = params.get("acertos") || 0;
-document.getElementById("totalAcertos").textContent = acertos;
-</script>
-
-</body>
-</html>
+<label><input type="radio" name="q8" checked> d) Qualquer trabalhador ao identificar risco</
